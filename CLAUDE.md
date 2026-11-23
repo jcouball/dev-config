@@ -32,3 +32,9 @@ Windows repo on sophon (`ssh sophon`), not on the Mac. Each config repo's
 README says how its changes are certified.
 
 Two rules for this repo: no git submodules, and no machine configuration.
+
+<!-- jcouball-github guardrails: begin sha256:f3d2a6edbe01 -->
+Never commit or push to `main` or `master`. Create a topic branch
+first (`git switch -c <type>/<short-description>`) and open a pull
+request instead.
+<!-- jcouball-github guardrails: end -->
