@@ -1,0 +1,5 @@
+# The three config repos are cloned into this directory by clone-repos.sh.
+# Each is its own repo and is never committed here.
+/mac-dev-config/
+/ubuntu-dev-config/
+/windows-dev-config/
