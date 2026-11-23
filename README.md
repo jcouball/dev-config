@@ -23,9 +23,15 @@ cd ~/github/jcouball/dev-config
 ./clone-repos.sh
 ```
 
-`clone-repos.sh` clones the three config repos into this directory. It skips a
-repo whose directory is already here and changes nothing in an existing clone,
-so it is safe to run again. Then open `~/github/jcouball/dev-config` in VS Code.
+`clone-repos.sh` clones the three config repos into this directory. It does not
+clone a repo whose directory is already here, and fetches and checks out
+nothing in an existing clone, so it is safe to run again. Then open
+`~/github/jcouball/dev-config` in VS Code.
+
+It makes one setting in each clone, new or not: where a repo has a `.githooks`
+directory, it sets `core.hooksPath` to `.githooks`, so git runs that repo's
+hooks. They stop a commit on `main` or `stable`; the repo's README says what
+else. Run the script again after a repo gains the directory.
 
 ```text
 ~/github/jcouball/dev-config/        this repo
